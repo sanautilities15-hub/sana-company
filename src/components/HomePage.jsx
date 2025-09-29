@@ -362,7 +362,7 @@ export default function HomePage() {
           <p className="cta-description">
             Join thousands of businesses who trust Sana Utilities for their paper product needs
           </p>
-          <button onclick={() => handleProductClick("Contact Us")} className="btn-contact">
+          <button onClick={() => handleProductClick(false)} className="btn-contact">
             Contact Us Today
             <ArrowRight className="btn-icon" />
           </button>
@@ -426,7 +426,7 @@ export default function HomePage() {
               Request Quote
             </h4>
             <p className="modal-description">
-              Get a personalized quote for <strong>{selectedProduct}</strong> and bulk pricing information.
+              Get a personalized quote{selectedProduct?(<> for <strong>{selectedProduct}</strong></>):''} and bulk pricing information.
             </p>
           </div>
           <form onSubmit={sendEmail} className="modal-form">
@@ -497,7 +497,7 @@ export default function HomePage() {
             <CheckCircle className="success-icon" />
             <h3 className="success-title">Enquiry Sent Successfully!</h3>
             <p className="success-message">
-              Thank you for your enquiry about {selectedProduct}. We'll get back to you soon!
+              Thank you for your enquiry{selectedProduct?` about ${selectedProduct}`:''}. We'll get back to you soon!
             </p>
           </div>
         </div>
