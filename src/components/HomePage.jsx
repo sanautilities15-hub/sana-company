@@ -271,11 +271,11 @@ export default function HomePage() {
               businesses, schools, and organizations with reliable quality and fast delivery.
             </p>
             <div className="hero-buttons">
-              <button className="btn-shop-now">
+              <button href="#products" onClick={()=>handleNavClick("products")} className="btn-shop-now">
                 Shop Now
                 <ArrowRight className="btn-icon" />
               </button>
-              <button className="btn-catalog">
+              <button href="#products" onClick={()=>handleNavClick("products")} className="btn-catalog">
                 View Catalog
               </button>
             </div>
@@ -362,7 +362,7 @@ export default function HomePage() {
           <p className="cta-description">
             Join thousands of businesses who trust Sana Utilities for their paper product needs
           </p>
-          <button className="btn-contact">
+          <button onclick={() => handleProductClick("Contact Us")} className="btn-contact">
             Contact Us Today
             <ArrowRight className="btn-icon" />
           </button>
